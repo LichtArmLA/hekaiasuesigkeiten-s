@@ -5,20 +5,22 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
-  background-color: #d69a9a;
+  background-color: #FFD700;
 }
 
 /* Logo in top-left corner */
 .top-logo {
-  position: fixed;
+  position: fixed;        /* stays in top-left corner */
   top: 20px;
   left: 20px;
-  width: 80px;         /* default size */
-  height: auto;
-  max-width: 10vw;     /* responsive max size */
-  border-radius: 8px;
+  width: 18vw;            /* slightly bigger than before */
+  max-width: 180px;       /* prevents it from being too large */
+  min-width: 90px;        /* prevents it from being too small on mobile */
+  height: auto;           /* keeps aspect ratio */
+  border-radius: 8px;     /* optional rounded corners */
   z-index: 1000;
 }
+
 
 @media (max-width: 600px) {
   .top-logo {
@@ -47,7 +49,8 @@ body {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  background: #f4c2c2;
+  background: black;
+  color: white;
   transition: background 0.2s, font-size 0.2s, padding 0.2s;
 }
 
@@ -79,3 +82,5 @@ body {
     padding: 12px;
   }
 }
+
+
