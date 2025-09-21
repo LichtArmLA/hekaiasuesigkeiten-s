@@ -1,0 +1,81 @@
+/* Body setup */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #d69a9a;
+}
+
+/* Logo in top-left corner */
+.top-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 80px;         /* default size */
+  height: auto;
+  max-width: 10vw;     /* responsive max size */
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+  .top-logo {
+    width: 60px;       /* smaller on mobile */
+  }
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 60px;    /* space so buttons don’t overlap with logo */
+}
+
+/* Buttons styling */
+.button-container button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f4c2c2;
+  transition: background 0.2s, font-size 0.2s, padding 0.2s;
+}
+
+.button-container button:active {
+  background: rgba(200, 150, 150, 0.9);
+}
+
+/* Make all button images the same size */
+.button-container button img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* Laptop / Desktop font size */
+@media (min-width: 801px) {
+  .button-container button {
+    font-size: 20px;
+    padding: 18px;
+  }
+}
+
+/* Mobile font size */
+@media (max-width: 800px) {
+  .button-container button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
